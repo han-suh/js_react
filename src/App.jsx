@@ -8,6 +8,9 @@ import L01JSX from "./components/L01JSX.jsx";
 import L02Props from "./components/L02Props.jsx";
 import L03State from "./components/L03State.jsx";
 import L04Counter from "./components/L04Counter.jsx";
+import L05Input from "./components/L05Input.jsx";
+import H01ToDos from "./components/H01ToDos.jsx";
+import L06ToDos from "./components/L06ToDos.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -21,6 +24,9 @@ function App() {
                     <Link to="/">Home</Link>
                 </li>
                 <li>
+                    <Link to="/homeork/H01ToDos">H01ToDos</Link>
+                </li>
+                <li>
                     <Link to="/study/L01JSX">L01JSX</Link>
                 </li>
                 <li>
@@ -32,17 +38,28 @@ function App() {
                 <li>
                     <Link to="/study/L04Counter">L04State - Counter</Link>
                 </li>
+                <li>
+                    <Link to="/study/L05Input">L05Input</Link>
+                </li>
+                <li>
+                    <Link to="/study/L06ToDos">L06ToDos</Link>
+                </li>
             </ul>
         </nav>
         <Routes>
             <Route path="/" element={<Home/>}/>
         {/*  path가 없을 때(/로 이동하면..) Home으로 이동  */}
-            <Route path="/study">
-                <Route path="L01JSX" element={<L01JSX></L01JSX>}/>
-                <Route path="L02Props" element={<L02Props></L02Props>}/>
-                <Route path="L03State" element={<L03State></L03State>}/>
-                <Route path="L04Counter" element={<L04Counter cnt={10}></L04Counter>}/>
-                                                            {/* 렌더링할 때 부모가 주는 값   */}
+                <Route path="/homework">
+                    <Route path="H01ToDos" element={<H01ToDos></H01ToDos>}/>
+                </Route>
+                <Route path="/study">
+                    <Route path="L01JSX" element={<L01JSX></L01JSX>}/>
+                    <Route path="L02Props" element={<L02Props></L02Props>}/>
+                    <Route path="L03State" element={<L03State></L03State>}/>
+                    <Route path="L04Counter" element={<L04Counter cnt={10}></L04Counter>}/>
+                                                                {/* 렌더링할 때 부모가 주는 값   */}
+                    <Route path="L05Input" element={<L05Input></L05Input>}/>
+                    <Route path="L06ToDos" element={<L06ToDos></L06ToDos>}/>
             </Route>
         </Routes>
     </BrowserRouter>
