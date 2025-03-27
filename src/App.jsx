@@ -11,6 +11,7 @@ import L04Counter from "./components/L04Counter.jsx";
 import L05Input from "./components/L05Input.jsx";
 import H01ToDos from "./components/H01ToDos.jsx";
 import L06ToDos from "./components/L06ToDos.jsx";
+import L07UseEffect from "./components/L07UseEffect.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -44,6 +45,9 @@ function App() {
                 <li>
                     <Link to="/study/L06ToDos">L06ToDos</Link>
                 </li>
+                <li>
+                    <Link to="/study/L07UseEffect">L07UseEffect</Link>
+                </li>
             </ul>
         </nav>
         <Routes>
@@ -60,6 +64,7 @@ function App() {
                                                                 {/* 렌더링할 때 부모가 주는 값   */}
                     <Route path="L05Input" element={<L05Input></L05Input>}/>
                     <Route path="L06ToDos" element={<L06ToDos></L06ToDos>}/>
+                    <Route path="L07UseEffect" element={<L07UseEffect></L07UseEffect>}/>
             </Route>
         </Routes>
     </BrowserRouter>
