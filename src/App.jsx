@@ -4,14 +4,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import Home from "./components/Home.jsx";
+import H01ToDos from "./components/H01ToDos.jsx";
+import H02Clock from "./components/H02Clock.jsx";
 import L01JSX from "./components/L01JSX.jsx";
 import L02Props from "./components/L02Props.jsx";
 import L03State from "./components/L03State.jsx";
 import L04Counter from "./components/L04Counter.jsx";
 import L05Input from "./components/L05Input.jsx";
-import H01ToDos from "./components/H01ToDos.jsx";
 import L06ToDos from "./components/L06ToDos.jsx";
 import L07UseEffect from "./components/L07UseEffect.jsx";
+import L08UseEffectClock from "./components/L08UseEffectClock.jsx";
+import L09FetchApi from "./components/L09FetchApi.jsx";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -26,6 +29,9 @@ function App() {
                 </li>
                 <li>
                     <Link to="/homeork/H01ToDos">H01ToDos</Link>
+                </li>
+                <li>
+                    <Link to="/homeork/H02Clock">H02Clock</Link>
                 </li>
                 <li>
                     <Link to="/study/L01JSX">L01JSX</Link>
@@ -48,6 +54,12 @@ function App() {
                 <li>
                     <Link to="/study/L07UseEffect">L07UseEffect</Link>
                 </li>
+                <li>
+                    <Link to="/study/L08UseEffectClock">L08UseEffectClock</Link>
+                </li>
+                <li>
+                    <Link to="/study/L09FetchApi">L09FetchApi</Link>
+                </li>
             </ul>
         </nav>
         <Routes>
@@ -58,6 +70,7 @@ function App() {
                 </Route>
                 <Route path="/study">
                     <Route path="L01JSX" element={<L01JSX></L01JSX>}/>
+                    <Route path="H02Clock" element={<H02Clock></H02Clock>}/>
                     <Route path="L02Props" element={<L02Props></L02Props>}/>
                     <Route path="L03State" element={<L03State></L03State>}/>
                     <Route path="L04Counter" element={<L04Counter cnt={10}></L04Counter>}/>
@@ -65,6 +78,8 @@ function App() {
                     <Route path="L05Input" element={<L05Input></L05Input>}/>
                     <Route path="L06ToDos" element={<L06ToDos></L06ToDos>}/>
                     <Route path="L07UseEffect" element={<L07UseEffect></L07UseEffect>}/>
+                    <Route path="L08UseEffectClock" element={<L08UseEffectClock></L08UseEffectClock>}/>
+                    <Route path="L09FetchApi" element={<L09FetchApi></L09FetchApi>}/>
             </Route>
         </Routes>
     </BrowserRouter>
